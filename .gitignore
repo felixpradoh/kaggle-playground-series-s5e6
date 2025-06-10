@@ -98,7 +98,7 @@ Thumbs.db
 
 # Model files (large files)
 # *.pkl
-# *.pickle
+*.pickle
 *.h5
 *.hdf5
 *.joblib
