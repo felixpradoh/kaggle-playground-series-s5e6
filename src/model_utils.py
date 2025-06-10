@@ -120,7 +120,8 @@ class ModelTrainer:
         self.y_pred_top3 = y_pred_top3
         self.classes = classes
         return metrics
-      def generate_filename_base(self, map3_score: float) -> str:
+    
+    def generate_filename_base(self, map3_score: float) -> str:
         """Genera la nomenclatura base para archivos"""
         map3_str = f"{map3_score:.4f}".replace('.', '')
         return f"{self.model_abbreviation}_MAP@3-{map3_str}"
@@ -184,7 +185,7 @@ class ModelTrainer:
         hparams_path = os.path.join(model_folder, f'{base_filename}_hparams.json')
         with open(hparams_path, 'w', encoding='utf-8') as f:
             json.dump(hparams_dict, f, indent=2, ensure_ascii=False)
-          print(f"✅ Artefactos guardados en carpeta: {base_filename}/")
+        print(f"✅ Artefactos guardados en carpeta: {base_filename}/")
         return base_filename
         
     
@@ -228,7 +229,7 @@ class ModelTrainer:
         submission_info = {
             'model_type': self.model_name,
             'model_abbreviation': self.model_abbreviation,
-            'map3_score': self.metrics['map3_score'],
+            'map3_score': round(float(self.metrics['map3_score']), 4),
             'submission_file': f'{base_filename}_submission.csv',
             'num_predictions': len(submission_df),
             'format': 'MAP@3 - Top 3 fertilizer names separated by spaces',

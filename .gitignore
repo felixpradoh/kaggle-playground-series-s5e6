@@ -97,11 +97,12 @@ ehthumbs.db
 Thumbs.db
 
 # Model files (large files)
-*.pkl
-*.pickle
+# *.pkl
+# *.pickle
 *.h5
 *.hdf5
 *.joblib
+*.csv
 
 # Temporary files
 *.tmp
