@@ -1,0 +1,11 @@
+{
+  "model_type": "XGBClassifier",
+  "model_abbreviation": "XGB",
+  "map3_score": 0.34417288888888886,
+  "submission_file": "XGB_MAP@3-03441_submission.csv",
+  "num_predictions": 250000,
+  "format": "MAP@3 - Top 3 fertilizer names separated by spaces",
+  "target_variable": "Fertilizer Name",
+  "timestamp": "2025-06-09T20:59:52.106038",
+  "kaggle_competition": "playground-series-s5e6"
+}

@@ -1,0 +1,11 @@
+{
+  "model_type": "LGBMClassifier",
+  "model_abbreviation": "LGBM",
+  "map3_score": 0.3234,
+  "submission_file": "LGBM_MAP@3-03234_submission.csv",
+  "num_predictions": 250000,
+  "format": "MAP@3 - Top 3 fertilizer names separated by spaces",
+  "target_variable": "Fertilizer Name",
+  "timestamp": "2025-06-06T19:39:46.275781",
+  "kaggle_competition": "playground-series-s5e6"
+}

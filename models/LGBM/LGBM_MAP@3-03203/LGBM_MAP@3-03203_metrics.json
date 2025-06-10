@@ -1,0 +1,27 @@
+{
+  "model_type": "LGBMClassifier",
+  "model_abbreviation": "LGBM",
+  "tier": "TIER_1",
+  "target_variable": "Fertilizer Name",
+  "map3_score": 0.3203,
+  "auc_roc": 0.5654,
+  "accuracy": 0.1875,
+  "precision": 0.1898,
+  "recall": 0.1875,
+  "f1_score": 0.1863,
+  "num_classes": 7.0,
+  "features_used": 8,
+  "features_list": [
+    "Temparature",
+    "Humidity",
+    "Moisture",
+    "Nitrogen",
+    "Potassium",
+    "Phosphorous",
+    "P_Level_encoded",
+    "Soil_Crop_Combo_encoded"
+  ],
+  "training_time": 448.7151,
+  "timestamp": "2025-06-06T21:19:39.916107",
+  "kaggle_competition": "playground-series-s5e6"
+}
