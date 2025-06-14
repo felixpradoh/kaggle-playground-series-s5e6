@@ -1,0 +1,16 @@
+{
+  "model_type": "XGBClassifier",
+  "model_abbreviation": "XGB",
+  "cv_strategy": "10-Fold Stratified Cross Validation",
+  "map3_score_cv_mean": 0.34079933333333334,
+  "map3_score_oof": 0.3407993333333334,
+  "submission_file": "XGB_10CV_MAP@3-034080_submission.csv",
+  "num_predictions": 250000,
+  "format": "MAP@3 - Top 3 fertilizer names separated by spaces",
+  "target_variable": "Fertilizer Name",
+  "ensemble_models": 10,
+  "features_used": 8,
+  "total_training_time_minutes": 165.94032237529754,
+  "timestamp": "2025-06-11T12:31:26.958794",
+  "kaggle_competition": "playground-series-s5e6"
+}
