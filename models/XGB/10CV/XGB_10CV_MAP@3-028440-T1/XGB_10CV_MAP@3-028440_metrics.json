@@ -1,0 +1,158 @@
+{
+  "model_type": "XGBClassifier",
+  "model_abbreviation": "XGB",
+  "tier": "10_FOLD_CV",
+  "target_variable": "Fertilizer Name",
+  "cv_strategy": "10-Fold Stratified Cross Validation",
+  "optimization_method": "Manual hyperparameter tuning",
+  "map3_score_cv_mean": 0.28439644444444445,
+  "map3_score_cv_std": 0.00131415015020505,
+  "map3_score_oof": 0.28439644444444456,
+  "accuracy_cv_mean": 0.15789866666666666,
+  "accuracy_cv_std": 0.001403729775972076,
+  "accuracy_oof": 0.15789866666666666,
+  "num_classes": 7,
+  "features_used": 3,
+  "features_list": [
+    "N_P_ratio",
+    "Soil_Crop_Combo",
+    "Crop Type"
+  ],
+  "cv_folds": 10,
+  "total_models_trained": 10,
+  "fold_results": [
+    {
+      "fold": 1,
+      "accuracy": 0.15904,
+      "map3": 0.2852022222222222,
+      "best_iteration": 103,
+      "train_samples": 675000,
+      "val_samples": 75000,
+      "training_time": 211.76031804084778
+    },
+    {
+      "fold": 2,
+      "accuracy": 0.15985333333333332,
+      "map3": 0.28626,
+      "best_iteration": 89,
+      "train_samples": 675000,
+      "val_samples": 75000,
+      "training_time": 197.26169800758362
+    },
+    {
+      "fold": 3,
+      "accuracy": 0.15738666666666667,
+      "map3": 0.28385111111111117,
+      "best_iteration": 86,
+      "train_samples": 675000,
+      "val_samples": 75000,
+      "training_time": 193.8212375640869
+    },
+    {
+      "fold": 4,
+      "accuracy": 0.15918666666666667,
+      "map3": 0.28631333333333336,
+      "best_iteration": 101,
+      "train_samples": 675000,
+      "val_samples": 75000,
+      "training_time": 207.1362771987915
+    },
+    {
+      "fold": 5,
+      "accuracy": 0.15534666666666666,
+      "map3": 0.2827311111111111,
+      "best_iteration": 88,
+      "train_samples": 675000,
+      "val_samples": 75000,
+      "training_time": 194.89720726013184
+    },
+    {
+      "fold": 6,
+      "accuracy": 0.15788,
+      "map3": 0.2840511111111111,
+      "best_iteration": 96,
+      "train_samples": 675000,
+      "val_samples": 75000,
+      "training_time": 203.23126888275146
+    },
+    {
+      "fold": 7,
+      "accuracy": 0.15794666666666668,
+      "map3": 0.28441999999999995,
+      "best_iteration": 89,
+      "train_samples": 675000,
+      "val_samples": 75000,
+      "training_time": 195.6423659324646
+    },
+    {
+      "fold": 8,
+      "accuracy": 0.15696,
+      "map3": 0.2832555555555556,
+      "best_iteration": 88,
+      "train_samples": 675000,
+      "val_samples": 75000,
+      "training_time": 194.07263112068176
+    },
+    {
+      "fold": 9,
+      "accuracy": 0.15642666666666666,
+      "map3": 0.2827488888888889,
+      "best_iteration": 89,
+      "train_samples": 675000,
+      "val_samples": 75000,
+      "training_time": 196.5934522151947
+    },
+    {
+      "fold": 10,
+      "accuracy": 0.15896,
+      "map3": 0.2851311111111111,
+      "best_iteration": 95,
+      "train_samples": 675000,
+      "val_samples": 75000,
+      "training_time": 202.17807149887085
+    }
+  ],
+  "accuracy_cv_coefficient": 0.008890067317258808,
+  "map3_cv_coefficient": 0.0046208388883770424,
+  "training_time_total": 1998.9867358207703,
+  "training_time_per_fold_avg": 199.6594527721405,
+  "hyperparameters": {
+    "objective": "multi:softprob",
+    "num_class": 7,
+    "eval_metric": "mlogloss",
+    "max_depth": 12,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "learning_rate": 0.03,
+    "n_estimators": 3000,
+    "reg_alpha": 0.1,
+    "reg_lambda": 1.0,
+    "gamma": 0.25,
+    "random_state": 513,
+    "n_jobs": -1,
+    "verbosity": 0,
+    "early_stopping_rounds": 100
+  },
+  "top_features": [
+    {
+      "feature": "Crop Type",
+      "mean": 0.38899582624435425,
+      "std": 0.003059836570173502
+    },
+    {
+      "feature": "Soil_Crop_Combo",
+      "mean": 0.31528526544570923,
+      "std": 0.0013952362351119518
+    },
+    {
+      "feature": "N_P_ratio",
+      "mean": 0.29571887850761414,
+      "std": 0.0023753878194838762
+    }
+  ],
+  "timestamp": "2025-06-14T20:51:05.890628",
+  "kaggle_competition": "playground-series-s5e6",
+  "ensemble_method": "Average of 10-fold CV models",
+  "models_saved": false,
+  "memory_optimized": true
+}
