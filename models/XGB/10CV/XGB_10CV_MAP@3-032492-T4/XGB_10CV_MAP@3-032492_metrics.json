@@ -1,0 +1,204 @@
+{
+  "model_type": "XGBClassifier",
+  "model_abbreviation": "XGB",
+  "tier": "10_FOLD_CV",
+  "target_variable": "Fertilizer Name",
+  "cv_strategy": "10-Fold Stratified Cross Validation",
+  "optimization_method": "Manual hyperparameter tuning",
+  "map3_score_cv_mean": 0.3249151111111111,
+  "map3_score_cv_std": 0.0013577698167110406,
+  "map3_score_oof": 0.324915111111111,
+  "accuracy_cv_mean": 0.1913453333333333,
+  "accuracy_cv_std": 0.0013119537781680376,
+  "accuracy_oof": 0.19134533333333334,
+  "num_classes": 7,
+  "features_used": 14,
+  "features_list": [
+    "Temparature",
+    "Humidity",
+    "Moisture",
+    "Nitrogen",
+    "Potassium",
+    "Phosphorous",
+    "N_P_ratio",
+    "N_K_ratio",
+    "P_K_ratio",
+    "Total_NPK",
+    "Temp_Hum_index",
+    "Soil_Crop_Combo",
+    "Soil Type",
+    "Crop Type"
+  ],
+  "cv_folds": 10,
+  "total_models_trained": 10,
+  "fold_results": [
+    {
+      "fold": 1,
+      "accuracy": 0.19233333333333333,
+      "map3": 0.32538222222222224,
+      "best_iteration": 331,
+      "train_samples": 675000,
+      "val_samples": 75000,
+      "training_time": 973.742457151413
+    },
+    {
+      "fold": 2,
+      "accuracy": 0.19082666666666667,
+      "map3": 0.32481111111111105,
+      "best_iteration": 349,
+      "train_samples": 675000,
+      "val_samples": 75000,
+      "training_time": 1019.5667097568512
+    },
+    {
+      "fold": 3,
+      "accuracy": 0.19284,
+      "map3": 0.3263155555555556,
+      "best_iteration": 373,
+      "train_samples": 675000,
+      "val_samples": 75000,
+      "training_time": 1099.5982012748718
+    },
+    {
+      "fold": 4,
+      "accuracy": 0.19021333333333335,
+      "map3": 0.3238511111111111,
+      "best_iteration": 349,
+      "train_samples": 675000,
+      "val_samples": 75000,
+      "training_time": 1029.3248784542084
+    },
+    {
+      "fold": 5,
+      "accuracy": 0.19228,
+      "map3": 0.32443555555555553,
+      "best_iteration": 310,
+      "train_samples": 675000,
+      "val_samples": 75000,
+      "training_time": 805.9534313678741
+    },
+    {
+      "fold": 6,
+      "accuracy": 0.19244,
+      "map3": 0.3269177777777778,
+      "best_iteration": 333,
+      "train_samples": 675000,
+      "val_samples": 75000,
+      "training_time": 920.454820394516
+    },
+    {
+      "fold": 7,
+      "accuracy": 0.18996,
+      "map3": 0.32506444444444443,
+      "best_iteration": 348,
+      "train_samples": 675000,
+      "val_samples": 75000,
+      "training_time": 974.7851860523224
+    },
+    {
+      "fold": 8,
+      "accuracy": 0.19154666666666667,
+      "map3": 0.3253377777777778,
+      "best_iteration": 379,
+      "train_samples": 675000,
+      "val_samples": 75000,
+      "training_time": 1079.808818101883
+    },
+    {
+      "fold": 9,
+      "accuracy": 0.19213333333333332,
+      "map3": 0.3250866666666667,
+      "best_iteration": 335,
+      "train_samples": 675000,
+      "val_samples": 75000,
+      "training_time": 963.8427197933197
+    },
+    {
+      "fold": 10,
+      "accuracy": 0.18888,
+      "map3": 0.32194888888888884,
+      "best_iteration": 331,
+      "train_samples": 675000,
+      "val_samples": 75000,
+      "training_time": 909.9083027839661
+    }
+  ],
+  "accuracy_cv_coefficient": 0.006856471257036341,
+  "map3_cv_coefficient": 0.004178844782158268,
+  "training_time_total": 9785.03222322464,
+  "training_time_per_fold_avg": 977.6985525131225,
+  "hyperparameters": {
+    "objective": "multi:softprob",
+    "num_class": 7,
+    "eval_metric": "mlogloss",
+    "max_depth": 12,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "learning_rate": 0.03,
+    "n_estimators": 3000,
+    "reg_alpha": 0.1,
+    "reg_lambda": 1.0,
+    "gamma": 0.25,
+    "random_state": 513,
+    "n_jobs": -1,
+    "verbosity": 0,
+    "early_stopping_rounds": 100
+  },
+  "top_features": [
+    {
+      "feature": "P_K_ratio",
+      "mean": 0.07688248157501221,
+      "std": 0.00010089113493449986
+    },
+    {
+      "feature": "N_K_ratio",
+      "mean": 0.07606574147939682,
+      "std": 0.00014221351011656225
+    },
+    {
+      "feature": "N_P_ratio",
+      "mean": 0.07572910934686661,
+      "std": 0.00011368792911525816
+    },
+    {
+      "feature": "Phosphorous",
+      "mean": 0.07477502524852753,
+      "std": 0.00015099919983185828
+    },
+    {
+      "feature": "Nitrogen",
+      "mean": 0.07377643138170242,
+      "std": 0.00012330054596532136
+    },
+    {
+      "feature": "Temp_Hum_index",
+      "mean": 0.07224864512681961,
+      "std": 9.630495333112776e-05
+    },
+    {
+      "feature": "Potassium",
+      "mean": 0.07119942456483841,
+      "std": 9.23381739994511e-05
+    },
+    {
+      "feature": "Total_NPK",
+      "mean": 0.07106167823076248,
+      "std": 8.910227916203439e-05
+    },
+    {
+      "feature": "Moisture",
+      "mean": 0.07085589319467545,
+      "std": 0.0001181359839392826
+    },
+    {
+      "feature": "Crop Type",
+      "mean": 0.07017283886671066,
+      "std": 0.0002275097358506173
+    }
+  ],
+  "timestamp": "2025-06-15T10:35:48.704242",
+  "kaggle_competition": "playground-series-s5e6",
+  "ensemble_method": "Average of 10-fold CV models",
+  "models_saved": false,
+  "memory_optimized": true
+}

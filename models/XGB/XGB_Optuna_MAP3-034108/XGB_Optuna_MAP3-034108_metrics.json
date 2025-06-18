@@ -1,0 +1,19 @@
+{
+  "validation_map3": 0.3410785185185184,
+  "validation_accuracy": 0.20530222222222222,
+  "optuna_best_map3": 0.3410785185185184,
+  "optimization_time_min": 121.27498746315638,
+  "n_trials": 163,
+  "best_params": {
+    "max_depth": 10,
+    "min_child_weight": 2,
+    "learning_rate": 0.04,
+    "n_estimators": 450,
+    "subsample": 0.775,
+    "colsample_bytree": 0.47500000000000003,
+    "colsample_bylevel": 1.0,
+    "colsample_bynode": 0.9,
+    "alpha": 0.825,
+    "reg_lambda": 4.8
+  }
+}
