@@ -110,3 +110,6 @@ Thumbs.db
 
 # Kaggle specific
 .kaggle/
+
+# Ignorar todo el contenido de la carpeta others/
+others/

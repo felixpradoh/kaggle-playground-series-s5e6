@@ -3,177 +3,114 @@
 [![Competition](https://img.shields.io/badge/Kaggle-Competition-blue)](https://www.kaggle.com/competitions/playground-series-s5e6)
 [![Status](https://img.shields.io/badge/Status-Active-green)](https://www.kaggle.com/competitions/playground-series-s5e6)
 
-## 📋 Descripción del Problema
+## 📋 Problem Description
 
-Este proyecto aborda la **Playground Series - Season 5, Episode 6** de Kaggle, enfocado en la predicción de fertilizantes óptimos para cultivos basándose en condiciones ambientales y características del suelo.
+This project addresses the **Playground Series - Season 5, Episode 6** on Kaggle, focused on predicting optimal fertilizers for crops based on environmental and soil characteristics.
 
-### Objetivo
-Predecir el **tipo de fertilizante más adecuado** para maximizar el rendimiento de cultivos específicos, considerando factores como:
-- Condiciones climáticas (temperatura, humedad)
-- Características del suelo (tipo, humedad del suelo)
-- Tipo de cultivo
-- Niveles de nutrientes (nitrógeno, potasio, fósforo)
+### Objective
+Predict the **most suitable fertilizer type** to maximize crop yield, considering factors such as:
+- Weather conditions (temperature, humidity)
+- Soil characteristics (type, soil moisture)
+- Crop type
+- Nutrient levels (nitrogen, potassium, phosphorus)
 
 ## 📊 Dataset
 
-### Archivos Principales
-- **`train.csv`**: 750,000 registros de entrenamiento
-- **`test.csv`**: 250,000 registros para predicción
-- **`sample_submission.csv`**: Formato de envío requerido
+### Main Files
+- **`train.csv`**: 750,000 training records
+- **`test.csv`**: 250,000 records for prediction
+- **`sample_submission.csv`**: Required submission format
 
-### Características (Features)
-| Variable | Descripción | Tipo |
+### Features
+| Variable | Description | Type |
 |----------|-------------|------|
-| `Temparature` | Temperatura ambiente | Numérica |
-| `Humidity` | Humedad relativa del aire | Numérica |
-| `Moisture` | Humedad del suelo | Numérica |
-| `Soil Type` | Tipo de suelo (Clayey, Sandy, Red, Black) | Categórica |
-| `Crop Type` | Tipo de cultivo (Sugarcane, Millets, Barley, Paddy, etc.) | Categórica |
-| `Nitrogen` | Nivel de nitrógeno en el suelo | Numérica |
-| `Potassium` | Nivel de potasio en el suelo | Numérica |
-| `Phosphorous` | Nivel de fósforo en el suelo | Numérica |
+| `Temparature` | Ambient temperature | Numeric |
+| `Humidity` | Relative air humidity | Numeric |
+| `Moisture` | Soil moisture | Numeric |
+| `Soil Type` | Soil type (Clayey, Sandy, Red, Black) | Categorical |
+| `Crop Type` | Crop type (Sugarcane, Millets, Barley, Paddy, etc.) | Categorical |
+| `Nitrogen` | Nitrogen level in soil | Numeric |
+| `Potassium` | Potassium level in soil | Numeric |
+| `Phosphorous` | Phosphorus level in soil | Numeric |
 
-### Variable Objetivo
-- **`Fertilizer Name`**: Tipo de fertilizante recomendado (ej: 28-28, 17-17-17, DAP, Urea, etc.)
+### Target Variable
+- **`Fertilizer Name`**: Recommended fertilizer type (e.g., 28-28, 17-17-17, DAP, Urea, etc.)
 
-## 🏗️ Estructura del Proyecto
+## 🏗️ Project Structure
 
 ```
 📦 kaggle-playground-series-s5e6
-├── 📁 data/                    # Datasets de la competencia
-│   ├── train.csv              # Datos de entrenamiento
-│   ├── test.csv               # Datos de prueba
-│   └── sample_submission.csv  # Formato de envío
-├── 📁 src/                    # Código fuente
-├── 📁 notebooks/              # Jupyter notebooks para EDA y experimentos
-├── 📁 models/                 # Modelos entrenados
-├── 📁 submissions/            # Archivos de envío a Kaggle
-└── README.md                  # Este archivo
+├── 📁 data/         # Competition datasets and processed data
+│   └── processed/   # Preprocessed and feature files
+├── 📁 models/       # Trained models and results
+│   └── XGB/         # XGBoost model folders
+├── 📁 notebooks/    # Jupyter notebooks for EDA and experiments
+├── 📁 src/          # Source code and utilities
+├── 📁 others/       # Additional notebooks and experiments
 ```
 
-## 🚀 Guía de Colaboración
+## 🚀 Collaboration Guide
 
-### Flujo de Trabajo con Git
+### Git Workflow
 
-#### Ramas del Proyecto
-- **`main`**: Rama principal con código estable
-- **`develop`**: Rama de desarrollo activo
-- **`experiment/felix`**: Experimentos de Felix
-- **`experiment/alberto`**: Experimentos de Alberto
+#### Branches
 
-#### Comandos Básicos
+- **`main`**: Main branch with stable code
+- **`develop`**: Active development branch
+- **`experiment/felix`**: Felix's experiments
+- **`experiment/alberto`**: Alberto's experiments
+
+#### Basic Commands
+
 ```powershell
-# Cambiar entre ramas
+# Switch between branches
 git checkout develop
-git checkout experiment/[nombre]
+git checkout experiment/[name]
 
-# Actualizar rama con cambios de main
-git checkout [tu-rama]
+# Update your branch with main
+git checkout [your-branch]
 git merge main
-git push origin [tu-rama]
+git push origin [your-branch]
 
-# Crear nueva rama para experimento
-git checkout -b experiment/[nombre-experimento]
+# Create a new experiment branch
+git checkout -b experiment/[experiment-name]
 ```
 
-### Convenciones de Naming
+### Naming Conventions
 
-#### Archivos de Notebooks
-- `01_eda_[descripcion].ipynb` - Análisis exploratorio
-- `02_preprocessing_[descripcion].ipynb` - Preprocesamiento
-- `03_model_[algoritmo].ipynb` - Modelos específicos
-- `04_ensemble_[descripcion].ipynb` - Modelos ensemble
+#### Notebook Files
 
-#### Archivos de Envío
-- `submission_[modelo]_[fecha]_[score].csv`
-- Ejemplo: `submission_xgboost_20250601_0845.csv`
+- `kaggle-s5e6-eda.ipynb` - Exploratory Data Analysis
+- `kaggle-s5e6-xgboost.ipynb` - XGBoost model experiments
+- `kaggle-s5e6-xgboost+optuna.ipynb` - XGBoost with Optuna hyperparameter tuning
+- Notebooks in `others/` - Additional experiments and alternative approaches (e.g., `single-xgb.ipynb`, `xgb+original+optuna.ipynb`, etc.)
 
-### Workflow Recomendado
+#### Submission Files
 
-1. **Análisis Exploratorio (EDA)**
-   - Distribución de variables
-   - Correlaciones
-   - Análisis por tipo de suelo/cultivo
-   - Identificación de outliers
+- `submission_[model]_[date]_[score].csv`
+- Example: `submission_xgboost_20250601_0845.csv`
 
-2. **Preprocesamiento**
-   - Encoding de variables categóricas
-   - Normalización/estandarización
+### Recommended Workflow
+
+1. **Exploratory Data Analysis (EDA)**
+   - Variable distribution
+   - Correlations
+   - Analysis by soil/crop type
+   - Outlier detection
+
+2. **Preprocessing**
+   - Encoding categorical variables
+   - Normalization/standardization
    - Feature engineering
-   - Tratamiento de valores faltantes
+   - Handling missing values
 
-3. **Modelado**
+3. **Modeling**
    - Baseline models
-   - Modelos avanzados (XGBoost, LightGBM, etc.)
-   - Validación cruzada
+   - Advanced models (XGBoost, LightGBM, etc.)
+   - Cross-validation
    - Hyperparameter tuning
 
 4. **Ensemble & Submission**
-   - Combinación de modelos
-   - Validación final
-   - Generación de envío
-
-## 🎯 Métricas de Evaluación
-
-La competencia utiliza **accuracy** como métrica principal de evaluación.
-
-## 🔧 Configuración del Entorno
-
-### Dependencias Recomendadas
-```python
-pandas
-numpy
-scikit-learn
-xgboost
-lightgbm
-matplotlib
-seaborn
-jupyter
-```
-
-### Instalación
-```powershell
-pip install -r requirements.txt  # (crear este archivo)
-```
-
-## 📈 Progreso del Equipo
-
-### Experimentos Realizados
-- [ ] EDA inicial
-- [ ] Baseline model
-- [ ] Feature engineering
-- [ ] XGBoost/LightGBM
-- [ ] Ensemble methods
-- [ ] Hyperparameter optimization
-
-### Mejores Scores
-| Modelo | Score | Fecha | Rama | Notas |
-|--------|-------|--------|------|-------|
-| TBD | TBD | TBD | TBD | TBD |
-
-## 📝 Notas y Observaciones
-
-### Insights del Dataset
-- Dataset balanceado con múltiples tipos de fertilizantes
-- Relación clara entre condiciones ambientales y tipo de fertilizante
-- Diferentes cultivos requieren diferentes estrategias de fertilización
-
-### TODO List
-- [ ] Crear script de preprocesamiento compartido
-- [ ] Implementar validación cruzada estratificada
-- [ ] Análisis de importancia de features
-- [ ] Optimización de hiperparámetros
-
-## 🤝 Contribuidores
-
-- **Felix** - `experiment/felix`
-- **Alberto** - `experiment/alberto`
-
-## 📚 Recursos Útiles
-
-- [Competencia en Kaggle](https://www.kaggle.com/competitions/playground-series-s5e6)
-- [Documentación de datos](https://www.kaggle.com/competitions/playground-series-s5e6/data)
-
----
-
-**¿Preguntas o sugerencias?** Abre un issue o comenta en la rama correspondiente.
+   - Model combination
+   - Final validation
+   - Submission generation
