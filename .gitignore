@@ -102,6 +102,7 @@ Thumbs.db
 *.h5
 *.hdf5
 *.joblib
+*.csv
 
 # Temporary files
 *.tmp
@@ -109,3 +110,6 @@ Thumbs.db
 
 # Kaggle specific
 .kaggle/
+
+# Ignorar todo el contenido de la carpeta others/
+others/
